@@ -36,7 +36,7 @@ export default function ServicesSection() {
                 <div className="flex justify-center absolute top-0 left-0 right-0 -translate-y-8 z-20">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-400 rounded-full flex items-center justify-center text-white cursor-pointer shadow-lg shadow-cyan-500/50 relative">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M6 9L12 15L18 9" stroke="#004AAD" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ export default function ServicesSection() {
                     </h2>
                     <p className="text-lg text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
 
-                    <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 text-white border-none px-10 py-4 text-base font-semibold rounded-full cursor-pointer mb-16 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300">
+                    <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-10 py-4 text-base font-semibold rounded-full cursor-pointer mb-16 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300" style={{ color: '#004AAD' }}>
                         CONOCE NUESTROS SERVICIOS
                     </button>
 

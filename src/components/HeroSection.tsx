@@ -9,7 +9,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="text-white flex-1 order-2 md:order-1 text-center md:text-left mt-4 md:mt-0">
-                    <p className="text-sm mb-4 text-white opacity-90"><span className="text-cyan-400">© BPOHAPPIFY.</span> Todos los derechos reservados.</p>
+                    <p className="text-sm mb-4 text-white opacity-90"><span style={{ color: '#004AAD' }}>© BPOHAPPIFY.</span> Todos los derechos reservados.</p>
                     <h1 className="text-5xl md:text-6xl font-Codec mb-4 leading-tight">Hilda Palacios</h1>
                     <p className="text-xl italic mb-8 opacity-95">"frase típica o que siempre nombra"</p>
                     <p className="text-lg leading-relaxed max-w-xl opacity-95 mx-auto md:mx-0">
@@ -21,8 +21,8 @@ export default function HeroSection() {
             </div>
 
             <div className="text-center text-white text-lg z-10 opacity-90">
-                <p className="pt-8 md:pt-12">Lorem ipsum dolor sit amet, consectetur<br />adipiscing <span className="text-cyan-400">elit</span>.</p>
-                <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 text-white border-none px-12 py-4 text-xl font-semibold rounded-full cursor-pointer mt-6 shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300">
+                <p className="pt-8 md:pt-12">Lorem ipsum dolor sit amet, consectetur<br />adipiscing <span style={{ color: '#004AAD' }}>elit</span>.</p>
+                <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-12 py-4 text-xl font-semibold rounded-full cursor-pointer mt-6 shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300" style={{ color: '#004AAD' }}>
                     ¡Conoce mas !
                 </button>
             </div>
