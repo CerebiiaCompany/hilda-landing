@@ -48,7 +48,7 @@ export default function ServicesSection() {
                     </h2>
                     <p className="text-lg text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
 
-                    <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 py-4 text-base font-semibold rounded-full cursor-pointer mb-16 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-auto max-w-sm mx-auto whitespace-nowrap" style={{ color: '#004AAD' }}>
+                    <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-4 text-base font-semibold rounded-full cursor-pointer mb-16 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-auto max-w-sm md:max-w-lg mx-auto whitespace-nowrap" style={{ color: '#004AAD' }}>
                         CONOCE NUESTROS SERVICIOS
                     </button>
 

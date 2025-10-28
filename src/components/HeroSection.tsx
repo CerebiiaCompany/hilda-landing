@@ -20,9 +20,9 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <div className="text-center text-white text-lg z-10 opacity-90">
+            <div className="text-center text-white text-lg z-10 opacity-90 flex flex-col items-center">
                 <p className="pt-8 md:pt-12">Lorem ipsum dolor sit amet, consectetur<br />adipiscing <span style={{ color: '#004AAD' }}>elit</span>.</p>
-                <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-16 sm:px-20 md:px-12 py-4 text-xl font-semibold rounded-full cursor-pointer mt-6 shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full max-w-xs sm:max-w-sm md:max-w-none md:w-auto" style={{ color: '#004AAD' }}>
+                <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-3 text-xl font-semibold rounded-full cursor-pointer mt-6 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full md:w-auto whitespace-nowrap" style={{ color: '#004AAD' }}>
                     ¡Conoce mas !
                 </button>
             </div>
