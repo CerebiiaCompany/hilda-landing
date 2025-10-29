@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function HeroSection() {
     return (
         <div className="min-h-screen relative overflow-hidden flex flex-col justify-between p-12 md:p-20">
