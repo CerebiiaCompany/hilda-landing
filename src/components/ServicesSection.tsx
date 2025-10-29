@@ -34,10 +34,13 @@ export default function ServicesSection() {
         <div className="bg-white">
             <div className="min-h-screen relative pb-20 pt-20 px-12 md:px-20">
                 <div className="flex justify-center absolute top-0 left-0 right-0 -translate-y-8 z-20">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-400 rounded-full flex items-center justify-center text-white cursor-pointer shadow-lg shadow-cyan-500/50 relative">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M6 9L12 15L18 9" stroke="#004AAD" strokeWidth="2" strokeLinecap="round" />
-                        </svg>
+                    <div className="relative">
+                        <div className="absolute inset-0 w-24 h-12 rounded-b-full -translate-x-4 translate-y-8 bg-primary-lighter"></div>
+                        <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-400 rounded-full flex items-center justify-center text-white cursor-pointer shadow-lg shadow-cyan-500/50 relative z-10">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#004AAD" strokeWidth="2" strokeLinecap="round" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
 
