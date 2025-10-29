@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "routes": [
+    {
+      "src": "^/$",
+      "status": 308,
+      "headers": { "Location": "/hilda-palacios/" }
+    },
+    { "handle": "filesystem" },
+    { "src": "^/hilda-palacios$", "dest": "/index.html" },
+    { "src": "^/hilda-palacios/(.*)$", "dest": "/$1" },
+    { "src": "^/hilda-palacios/.*", "dest": "/index.html" }
+  ]
+}
