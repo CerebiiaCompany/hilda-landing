@@ -7,9 +7,9 @@ export default function ServicesSection() {
 
 
     const services = [
-        { image: '/izquierda.png', alt: 'Servicio 1' },
-        { image: '/medio.png', alt: 'Servicio 2' },
-        { image: '/derecha.png', alt: 'Servicio 3' }
+        { image: `${import.meta.env.BASE_URL}izquierda.png`, alt: 'Servicio 1' },
+        { image: `${import.meta.env.BASE_URL}medio.png`, alt: 'Servicio 2' },
+        { image: `${import.meta.env.BASE_URL}derecha.png`, alt: 'Servicio 3' }
     ];
 
     const handlePrev = () => {
@@ -95,11 +95,11 @@ export default function ServicesSection() {
                     </div>
                 </div>
 
-                <img src="/vector1.png" alt="" className="absolute top-[10%] left-[5%] w-32 h-32 z-10 opacity-70" />
-                <img src="/vector2.png" alt="" className="absolute top-[15%] right-[8%] w-36 h-36 z-10 opacity-70" />
-                <img src="/vector3.png" alt="" className="absolute top-[50%] left-[15%] w-28 h-28 z-10 opacity-70" />
-                <img src="/vector4.png" alt="" className="absolute bottom-[25%] left-[8%] w-32 h-32 z-10 opacity-70" />
-                <img src="/vector5.png" alt="" className="absolute bottom-[20%] right-[10%] w-36 h-36 z-10 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector1.png`} alt="" className="absolute top-[10%] left-[5%] w-32 h-32 z-10 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector2.png`} alt="" className="absolute top-[15%] right-[8%] w-36 h-36 z-10 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector3.png`} alt="" className="absolute top-[50%] left-[15%] w-28 h-28 z-10 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector4.png`} alt="" className="absolute bottom-[25%] left-[8%] w-32 h-32 z-10 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector5.png`} alt="" className="absolute bottom-[20%] right-[10%] w-36 h-36 z-10 opacity-70" />
             </div>
 
             <Footer />

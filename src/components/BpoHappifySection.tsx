@@ -39,7 +39,7 @@ export default function BpoHappifySection() {
                 <div className="flex-1 flex justify-center items-center">
                     <div className="relative flex justify-center items-center">
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[650px] md:h-[650px] bg-white rounded-full blur-3xl opacity-40"></div>
-                        <img src="/Frame 38.png" alt="BPO Happify" className="w-full max-w-[450px] relative z-10" />
+                        <img src={`${import.meta.env.BASE_URL}Frame 38.png`} alt="BPO Happify" className="w-full max-w-[450px] relative z-10" />
                     </div>
                 </div>
             </div>
