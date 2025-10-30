@@ -44,14 +44,14 @@ export default function ServicesSection() {
                     </div>
                 </div>
 
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold text-indigo-500 mb-4 leading-tight">
+                <div className="max-w-6xl mx-auto text-center relative z-20">
+                    <h2 className="text-4xl md:text-5xl font-bold text-indigo-500 mb-4 leading-tight relative z-20">
                         Lorem ipsum dolor sit amet, consectetur<br />
                         adipiscing <span className="text-cyan-400">elit</span>
                     </h2>
-                    <p className="text-lg text-gray-800 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    <p className="text-lg text-gray-800 mb-4 relative z-20">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
 
-                    <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-4 text-base font-semibold rounded-full cursor-pointer mb-16 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-auto max-w-sm md:max-w-lg mx-auto whitespace-nowrap" style={{ color: '#004AAD' }}>
+                    <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-4 text-base font-semibold rounded-full cursor-pointer mb-16 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-auto max-w-sm md:max-w-lg mx-auto whitespace-nowrap relative z-20" style={{ color: '#004AAD' }}>
                         CONOCE NUESTROS SERVICIOS
                     </button>
 
@@ -98,11 +98,11 @@ export default function ServicesSection() {
                     </div>
                 </div>
 
-                <img src={`${import.meta.env.BASE_URL}vector1.png`} alt="" className="absolute top-[10%] left-[5%] w-32 h-32 z-10 opacity-70" />
-                <img src={`${import.meta.env.BASE_URL}vector2.png`} alt="" className="absolute top-[15%] right-[8%] w-36 h-36 z-10 opacity-70" />
-                <img src={`${import.meta.env.BASE_URL}vector3.png`} alt="" className="absolute top-[50%] left-[15%] w-28 h-28 z-10 opacity-70" />
-                <img src={`${import.meta.env.BASE_URL}vector4.png`} alt="" className="absolute bottom-[25%] left-[8%] w-32 h-32 z-10 opacity-70" />
-                <img src={`${import.meta.env.BASE_URL}vector5.png`} alt="" className="absolute bottom-[20%] right-[10%] w-36 h-36 z-10 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector1.png`} alt="" className="absolute top-[10%] left-[5%] w-32 h-32 z-0 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector2.png`} alt="" className="absolute top-[15%] right-[8%] w-36 h-36 z-0 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector3.png`} alt="" className="absolute top-[50%] left-[15%] w-28 h-28 z-0 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector4.png`} alt="" className="absolute bottom-[25%] left-[8%] w-32 h-32 z-0 opacity-70" />
+                <img src={`${import.meta.env.BASE_URL}vector5.png`} alt="" className="absolute bottom-[20%] right-[10%] w-36 h-36 z-0 opacity-70" />
             </div>
 
             <Footer />
