@@ -56,7 +56,7 @@ export default function ServicesSection() {
                     </button>
 
                     <div className="md:hidden relative py-8 flex items-center justify-center gap-4 z-20">
-                        <button onClick={handlePrev} className="text-5xl text-gray-400 cursor-pointer transition-all duration-300 flex-shrink-0 hover:text-indigo-500 hover:scale-125 active:scale-95 bg-transparent border-none z-30 relative">‹</button>
+                        <button onClick={handlePrev} className="text-5xl text-black cursor-pointer transition-all duration-300 flex-shrink-0 hover:text-indigo-500 hover:scale-125 active:scale-95 bg-transparent border-none z-30 relative">‹</button>
 
                         <div className="rounded-2xl p-10 w-full max-w-sm min-h-[280px] flex flex-col items-center gap-6 border-2 border-purple-300 shadow-xl transition-all duration-600 ease-out relative z-20" style={{ backgroundColor: 'rgba(230, 220, 250, 0.5)' }}>
                             <img src={services[currentIndex].image} alt={services[currentIndex].alt} className="w-20 h-20 object-contain" />
@@ -65,7 +65,7 @@ export default function ServicesSection() {
                             </p>
                         </div>
 
-                        <button onClick={handleNext} className="text-5xl text-gray-400 cursor-pointer transition-all duration-300 flex-shrink-0 hover:text-indigo-500 hover:scale-125 active:scale-95 bg-transparent border-none z-30 relative">›</button>
+                        <button onClick={handleNext} className="text-5xl text-black cursor-pointer transition-all duration-300 flex-shrink-0 hover:text-indigo-500 hover:scale-125 active:scale-95 bg-transparent border-none z-30 relative">›</button>
                     </div>
 
                     <div className="hidden md:flex relative py-8 gap-8 justify-center items-center">
