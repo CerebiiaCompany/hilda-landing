@@ -69,6 +69,8 @@ export default function ServicesSection() {
                     </div>
 
                     <div className="hidden md:flex relative py-8 gap-8 justify-center items-center">
+                        <button onClick={handlePrev} className="text-4xl text-black cursor-pointer transition-all duration-300 flex-shrink-0 hover:text-indigo-500 hover:scale-125 active:scale-95">‹</button>
+
                         <div className="rounded-2xl p-10 w-72 min-h-[280px] flex flex-col items-center gap-6 border-2 border-purple-300 opacity-70 scale-90 hover:scale-95 transition-all duration-600 ease-out" style={{ backgroundColor: 'rgba(230, 220, 250, 0.5)' }}>
                             <img src={services[getCardIndex(-1)].image} alt={services[getCardIndex(-1)].alt} className="w-20 h-20 object-contain" />
                             <p className="text-sm leading-relaxed text-gray-700 text-center m-0">
@@ -76,17 +78,11 @@ export default function ServicesSection() {
                             </p>
                         </div>
 
-                        <div className="relative flex items-center gap-4">
-                            <button onClick={handlePrev} className="text-4xl text-black cursor-pointer transition-all duration-300 flex-shrink-0 hover:text-indigo-500 hover:scale-125 active:scale-95">‹</button>
-
-                            <div className="rounded-2xl p-10 w-72 min-h-[280px] flex flex-col items-center gap-6 border-2 border-purple-300 shadow-xl transition-all duration-600 ease-out hover:scale-105" style={{ backgroundColor: 'rgba(230, 220, 250, 0.5)' }}>
-                                <img src={services[currentIndex].image} alt={services[currentIndex].alt} className="w-20 h-20 object-contain" />
-                                <p className="text-sm leading-relaxed text-gray-700 text-center m-0">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                </p>
-                            </div>
-
-                            <button onClick={handleNext} className="text-4xl text-black cursor-pointer transition-all duration-300 flex-shrink-0 hover:text-indigo-500 hover:scale-125 active:scale-95">›</button>
+                        <div className="rounded-2xl p-10 w-72 min-h-[280px] flex flex-col items-center gap-6 border-2 border-purple-300 shadow-xl transition-all duration-600 ease-out hover:scale-105" style={{ backgroundColor: 'rgba(230, 220, 250, 0.5)' }}>
+                            <img src={services[currentIndex].image} alt={services[currentIndex].alt} className="w-20 h-20 object-contain" />
+                            <p className="text-sm leading-relaxed text-gray-700 text-center m-0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            </p>
                         </div>
 
                         <div className="rounded-2xl p-10 w-72 min-h-[280px] flex flex-col items-center gap-6 border-2 border-purple-300 opacity-70 scale-90 hover:scale-95 transition-all duration-600 ease-out" style={{ backgroundColor: 'rgba(230, 220, 250, 0.5)' }}>
@@ -95,6 +91,8 @@ export default function ServicesSection() {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             </p>
                         </div>
+
+                        <button onClick={handleNext} className="text-4xl text-black cursor-pointer transition-all duration-300 flex-shrink-0 hover:text-indigo-500 hover:scale-125 active:scale-95">›</button>
                     </div>
                 </div>
 
