@@ -9,22 +9,24 @@ export default function HeroSection() {
                 </div>
 
                 <div className="text-white flex-1 order-2 md:order-1 text-center md:text-left mt-4 md:mt-0">
-                    <p className="text-sm mb-4 text-white opacity-90"><span style={{ color: '#004AAD' }}>© BPOHAPPIFY.</span> Todos los derechos reservados.</p>
-                    <h1 className="text-5xl md:text-6xl font-Codec mb-4 leading-tight">Hilda Palacios</h1>
-                    <p className="text-xl italic mb-8 opacity-95">"frase típica o que siempre nombra"</p>
+                    <p className="text-sm mb-4 text-white opacity-90"><span style={{ color: '#004AAD' }}>Presidenta & CEO en BPO Happify </span> | Transformación digital con foco humano y resultados medibles.
+                    </p>
+                    <h1 className="text-5xl md:text-6xl font-Codec mb-4 leading-tight">Hilda Patricia Palacios</h1>
+
                     <p className="text-lg leading-relaxed max-w-xl opacity-95 mx-auto md:mx-0">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Hilda Patricia Palacios Morales lidera con la convicción de que la transformación digital debe tener rostro humano. Nacida en Cúcuta y formada como contadora pública, Hilda suma más de dos décadas impulsando empresas de TIC y contact center hacia modelos más rentables, eficientes y con propósito. Como fundadora y presidenta de BPO Happify, ha tejido una cultura que pone la felicidad del equipo al centro del servicio, porque, en su experiencia, “cuando el equipo está bien, el cliente también sonríe”.
+
                     </p>
                 </div>
             </div>
 
-            <div className="text-center text-white text-lg z-10 opacity-90 flex flex-col items-center">
-                <p className="pt-8 md:pt-12">Lorem ipsum dolor sit amet, consectetur<br />adipiscing <span style={{ color: '#004AAD' }}>elit</span>.</p>
-                <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-3 text-xl font-semibold rounded-full cursor-pointer mt-6 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full md:w-auto whitespace-nowrap" style={{ color: '#004AAD' }}>
-                    ¡Conoce mas !
-                </button>
+            <div className="text-center text-white text-lg z-10 opacity-90 flex flex-col items-center w-full md:w-2/5 mx-auto">
+                <p className="pt-8 md:pt-12">Liderazgo con propósito: combinamos visión financiera, transformación digital y compromiso con el ecosistema tecnológico para impulsar un crecimiento sostenible e inclusivo.</p>
+                <a href="https://www.linkedin.com/in/hilda-palacios-01637713a/" target="_blank" rel="noopener noreferrer">
+                    <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-3 text-xl font-semibold rounded-full cursor-pointer mt-6 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full md:w-auto whitespace-nowrap" style={{ color: '#004AAD' }}>
+                        LinkedIn
+                    </button>
+                </a>
             </div>
 
             <img src={`${import.meta.env.BASE_URL}cuadro1.png`} alt="" className="absolute w-24 md:w-32 h-24 md:h-32 top-[5%] md:top-[8%] left-[5%] md:left-[54%] z-0 animate-float opacity-80" />
