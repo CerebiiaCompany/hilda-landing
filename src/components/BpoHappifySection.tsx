@@ -9,32 +9,32 @@ export default function BpoHappifySection() {
 
                     <div className="flex flex-col gap-6">
                         <div className="flex items-start gap-4">
-                            <div className="w-6 h-6 border-2 border-[#03989E] rounded-full flex items-center justify-center flex-shrink-0">
-                                <span className="text-[#03989E] text-sm font-bold">✓</span>
+                            <div className="w-6 h-6 border-2 border-[#5CE1E6] rounded-full flex items-center justify-center flex-shrink-0">
+                                <span className="text-[#5CE1E6] text-sm font-bold">✓</span>
                             </div>
                             <p className="text-base md:text-lg leading-relaxed m-0">Estrategia Financiera y Operativa.</p>
                         </div>
                         <div className="flex items-start gap-4">
-                            <div className="w-6 h-6 border-2 border-[#03989E] rounded-full flex items-center justify-center flex-shrink-0">
-                                <span className="text-[#03989E] text-sm font-bold">✓</span>
+                            <div className="w-6 h-6 border-2 border-[#5CE1E6] rounded-full flex items-center justify-center flex-shrink-0">
+                                <span className="text-[#5CE1E6] text-sm font-bold">✓</span>
                             </div>
                             <p className="text-base md:text-lg leading-relaxed m-0">Transformación Digital.</p>
                         </div>
                         <div className="flex items-start gap-4">
-                            <div className="w-6 h-6 border-2 border-[#03989E] rounded-full flex items-center justify-center flex-shrink-0">
-                                <span className="text-[#03989E] text-sm font-bold">✓</span>
+                            <div className="w-6 h-6 border-2 border-[#5CE1E6] rounded-full flex items-center justify-center flex-shrink-0">
+                                <span className="text-[#5CE1E6] text-sm font-bold">✓</span>
                             </div>
                             <p className="text-base md:text-lg leading-relaxed m-0">Cultura Organizacional.</p>
                         </div>
                         <div className="flex items-start gap-4">
-                            <div className="w-6 h-6 border-2 border-[#03989E] rounded-full flex items-center justify-center flex-shrink-0">
-                                <span className="text-[#03989E] text-sm font-bold">✓</span>
+                            <div className="w-6 h-6 border-2 border-[#5CE1E6] rounded-full flex items-center justify-center flex-shrink-0">
+                                <span className="text-[#5CE1E6] text-sm font-bold">✓</span>
                             </div>
                             <p className="text-base md:text-lg leading-relaxed m-0">Alianzas B2B.</p>
                         </div>
                         <div className="flex items-start gap-4">
-                            <div className="w-6 h-6 border-2 border-[#03989E] rounded-full flex items-center justify-center flex-shrink-0">
-                                <span className="text-[#03989E] text-sm font-bold">✓</span>
+                            <div className="w-6 h-6 border-2 border-[#5CE1E6] rounded-full flex items-center justify-center flex-shrink-0">
+                                <span className="text-[#5CE1E6] text-sm font-bold">✓</span>
                             </div>
                             <p className="text-base md:text-lg leading-relaxed m-0">Liderazgo Femenino.</p>
                         </div>
