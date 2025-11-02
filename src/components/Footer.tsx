@@ -15,7 +15,7 @@ export default function Footer() {
                         <a href="mailto:contact@bpohappify.com" className="hover:opacity-80 transition-opacity">
                             <img src={`${import.meta.env.BASE_URL}gmail.png`} alt="Email" className="h-10 w-10" />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                        <a href="https://www.linkedin.com/in/hilda-palacios-01637713a/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                             <img src={`${import.meta.env.BASE_URL}linklind.png`} alt="LinkedIn" className="h-10 w-10" />
                         </a>
                     </div>
@@ -37,7 +37,7 @@ export default function Footer() {
                             <a href="mailto:contact@bpohappify.com" className="hover:opacity-80 transition-opacity">
                                 <img src={`${import.meta.env.BASE_URL}gmail.png`} alt="Email" className="h-8 w-8" />
                             </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                            <a href="https://www.linkedin.com/in/hilda-palacios-01637713a/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                                 <img src={`${import.meta.env.BASE_URL}linklind.png`} alt="LinkedIn" className="h-8 w-8" />
                             </a>
                         </div>
