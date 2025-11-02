@@ -5,7 +5,7 @@ export default function BpoHappifySection() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-24 max-w-7xl w-full">
                 <div className="flex-1 text-white pl-0 md:pl-16">
                     <h2 className="text-4xl md:text-6xl font-bold mb-2 tracking-wider">Especialidades</h2>
-                    <p className="text-base md:text-lg italic mb-8 md:mb-12 opacity-90">"Impulsamos resultados sostenibles a través de estrategia, innovación digital y liderazgo colaborativo con propósito."</p>
+                    <p className="text-base md:text-lg italic mb-8 md:mb-12 opacity-90">"Impulsa resultados sostenibles a través de estrategia, innovación digital y liderazgo colaborativo con propósito."</p>
 
                     <div className="flex flex-col gap-6">
                         <div className="flex items-start gap-4">
