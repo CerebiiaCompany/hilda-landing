@@ -11,7 +11,6 @@ export default function HildaPage() {
                 contact={{
                     name: 'Hilda Palacios',
                     phone: '+57 315 8346517',
-                    fileName: 'Hilda_Palacios.vcf'
                 }}
                 storageKey="hasSeenContactModal_Hilda"
             />

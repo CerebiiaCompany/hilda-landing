@@ -50,9 +50,8 @@ export default function HeroSection() {
             {showModal && (
                 <AddContactModal
                     contact={{
-                        name: 'Hilda Patricia Palacios',
-                        phone: '+57 300 123 4567',
-                        fileName: 'hilda-palacios.vcf'
+                        name: 'Hilda Palacios',
+                        phone: '+57 315 8346517',
                     }}
                     storageKey="hilda-contact-modal-seen"
                 />

@@ -1,4 +1,13 @@
+import { useState } from 'react';
+import AddContactModal from '../AddContactModal';
+
 export default function HeroSection() {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleAddContact = () => {
+        setShowModal(true);
+    };
+
     return (
         <div className="min-h-screen relative overflow-hidden flex flex-col justify-between p-12 md:p-20">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-16 z-10 max-w-7xl w-full mx-auto">
@@ -22,14 +31,30 @@ export default function HeroSection() {
             <div className="text-center text-white text-lg z-10 opacity-90 flex flex-col items-center w-full md:w-2/5 mx-auto">
                 <p className="pt-8 md:pt-12">Santiago ha representado a Happify en espacios sectoriales y comparte con claridad casos de éxito sobre cómo integrar RPA, chatbots y analítica para liberar a los agentes de lo repetitivo y potenciar lo humano.
                 </p>
-                <button
-                    onClick={() => window.open('https://www.linkedin.com/in/santiago-casta%C3%B1eda-894118267/', '_blank')}
-                    className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-3 text-xl font-semibold rounded-full cursor-pointer mt-6 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full md:w-auto whitespace-nowrap"
-                    style={{ color: '#004AAD' }}
-                >
-                    LinkedIn
-                </button>
+                <div className="flex flex-col md:flex-row gap-4 mt-6 w-full md:w-auto">
+                    <button
+                        onClick={handleAddContact}
+                        className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-3 text-xl font-semibold rounded-full cursor-pointer shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full md:w-auto whitespace-nowrap"
+                        style={{ color: '#004AAD' }}
+                    >
+                        Añadir Contacto
+                    </button>
+                    <a href="https://www.linkedin.com/in/santiago-casta%C3%B1eda-894118267/" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto">
+                        <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-3 text-xl font-semibold rounded-full cursor-pointer shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full md:w-auto whitespace-nowrap" style={{ color: '#004AAD' }}>
+                            LinkedIn
+                        </button>
+                    </a>
+                </div>
             </div>
+
+            {showModal && (
+                <AddContactModal
+                    contact={{
+                        name: 'Santiago Castañeda',
+                        phone: '+57 318 2574616',
+                    }}
+                />
+            )}
 
             <img src={`${import.meta.env.BASE_URL}cuadro1.png`} alt="" className="absolute w-24 md:w-32 h-24 md:h-32 top-[5%] md:top-[8%] left-[5%] md:left-[54%] z-0 animate-float opacity-80" />
             <img src={`${import.meta.env.BASE_URL}cuadro2.png`} alt="" className="absolute w-24 md:w-32 h-24 md:h-32 top-[3%] md:top-[6%] right-0 md:right-0 z-0 animate-float animation-delay-500 opacity-80" />

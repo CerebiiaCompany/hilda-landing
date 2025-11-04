@@ -11,7 +11,6 @@ export default function SantiagoPage() {
                 contact={{
                     name: 'Santiago Castañeda',
                     phone: '+57 318 2574616',
-                    fileName: 'Santiago_Castaneda.vcf'
                 }}
                 storageKey="hasSeenContactModal_Santiago"
             />
