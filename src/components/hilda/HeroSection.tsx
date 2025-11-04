@@ -1,11 +1,15 @@
 import { useState } from 'react';
-import AddContactModal from '../AddContactModal';
+import AddContactModal from '../AddContactModalButton';
 
 export default function HeroSection() {
     const [showModal, setShowModal] = useState(false);
 
     const handleAddContact = () => {
         setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
     };
 
     return (
@@ -53,7 +57,7 @@ export default function HeroSection() {
                         name: 'Hilda Palacios',
                         phone: '+57 315 8346517',
                     }}
-                    storageKey="hilda-contact-modal-seen"
+                    onClose={handleCloseModal}
                 />
             )}
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import AddContactModal from '../AddContactModal';
+import AddContactModal from '../AddContactModalButton';
 
 export default function HeroSection() {
     const [showModal, setShowModal] = useState(false);
@@ -53,6 +53,7 @@ export default function HeroSection() {
                         name: 'Santiago Castañeda',
                         phone: '+57 318 2574616',
                     }}
+                    onClose={() => setShowModal(false)}
                 />
             )}
 
