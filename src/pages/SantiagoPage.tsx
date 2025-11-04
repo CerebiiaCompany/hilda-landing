@@ -7,7 +7,14 @@ import AddContactModal from '../components/AddContactModal'
 export default function SantiagoPage() {
     return (
         <div className="overflow-x-hidden">
-            <AddContactModal />
+            <AddContactModal
+                contact={{
+                    name: 'Santiago Castañeda',
+                    phone: '+57 318 2574616',
+                    fileName: 'Santiago_Castaneda.vcf'
+                }}
+                storageKey="hasSeenContactModal_Santiago"
+            />
             <Navbar />
             <div className="bg-white">
                 <div className="bg-gradient-to-br from-[#9b6cf8] to-[#b89dfa] rounded-b-[80px] md:rounded-b-[6%]">

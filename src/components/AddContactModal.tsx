@@ -1,20 +1,31 @@
 import { useState, useEffect } from 'react';
 
-export default function AddContactModal() {
+interface ContactInfo {
+    name: string;
+    phone: string;
+    fileName: string;
+}
+
+interface AddContactModalProps {
+    contact: ContactInfo;
+    storageKey: string;
+}
+
+export default function AddContactModal({ contact, storageKey }: AddContactModalProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        const hasSeenModal = localStorage.getItem('hasSeenContactModal');
+        const hasSeenModal = localStorage.getItem(storageKey);
         if (!hasSeenModal) {
             setIsOpen(true);
         }
-    }, []);
+    }, [storageKey]);
 
     const handleAddContact = () => {
         const vCard = `BEGIN:VCARD
 VERSION:3.0
-FN:Hilda Palacios
-TEL:+57 315 8346517
+FN:${contact.name}
+TEL:${contact.phone}
 END:VCARD`;
 
         const blob = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
@@ -22,7 +33,7 @@ END:VCARD`;
 
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'Hilda_Palacios.vcf';
+        link.download = contact.fileName;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -31,12 +42,12 @@ END:VCARD`;
             window.URL.revokeObjectURL(url);
         }, 100);
 
-        localStorage.setItem('hasSeenContactModal', 'true');
+        localStorage.setItem(storageKey, 'true');
         setIsOpen(false);
     };
 
     const handleClose = () => {
-        localStorage.setItem('hasSeenContactModal', 'true');
+        localStorage.setItem(storageKey, 'true');
         setIsOpen(false);
     };
 
@@ -67,8 +78,8 @@ END:VCARD`;
                     </h2>
 
                     <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                        <p className="text-lg font-semibold text-gray-800">Hilda Palacios</p>
-                        <p className="text-cyan-500 font-medium">+57 315 8346517</p>
+                        <p className="text-lg font-semibold text-gray-800">{contact.name}</p>
+                        <p className="text-cyan-500 font-medium">{contact.phone}</p>
                     </div>
 
                     <button
