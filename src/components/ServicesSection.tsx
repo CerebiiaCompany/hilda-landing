@@ -8,19 +8,19 @@ export default function ServicesSection() {
 
     const services = [
         {
-            image: `${import.meta.env.BASE_URL}izquierda.png`,
-            alt: 'Servicio 1',
+            image: `${import.meta.env.BASE_URL}Happy-purple.png`,
+            alt: 'Implementación sin fricción',
+            text: 'Implementación sin fricción; piloto en semanas.'
+        },
+        {
+            image: `${import.meta.env.BASE_URL}Happy-purple.png`,
+            alt: 'Agentes felices',
             text: 'Agentes felices; menor rotación y mejor CSAT.'
         },
         {
-            image: `${import.meta.env.BASE_URL}medio.png`,
-            alt: 'Servicio 2',
+            image: `${import.meta.env.BASE_URL}Happy-purple.png`,
+            alt: 'Automatización con sentido',
             text: 'Automatización con sentido; +65% de agendamientos automáticos.'
-        },
-        {
-            image: `${import.meta.env.BASE_URL}derecha.png`,
-            alt: 'Servicio 3',
-            text: 'Implementación sin fricción; piloto en semanas.'
         }
     ];
 
@@ -58,13 +58,22 @@ export default function ServicesSection() {
 
                 <div className="max-w-6xl mx-auto text-center relative z-20">
                     <h2 className="text-4xl md:text-5xl font-bold text-indigo-500 mb-4 leading-tight relative z-20">
-                        CONTACT CENTER <span className="text-cyan-400">elit</span>
+                        Contact center feliz en <span className="text-cyan-400">Colombia</span>
                     </h2>
-                    <p className="text-lg text-gray-800 mb-4 relative z-20">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    <p className="text-lg text-gray-800 mb-4 relative z-20 max-w-4xl mx-auto px-4">En Happify fusionamos automatización inteligente con agentes motivados para entregar una atención al cliente humana, rápida y medible.</p>
 
-                    <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-4 text-base font-semibold rounded-full cursor-pointer mb-16 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-auto max-w-sm md:max-w-lg mx-auto whitespace-nowrap relative z-20" style={{ color: '#004AAD' }}>
-                        WEB DE HAPPY
-                    </button>
+                    <div className="flex flex-wrap justify-center gap-4 mb-16 relative z-20">
+                        <a href="https://happybpo.co/" target="_blank" rel="noopener noreferrer">
+                            <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-4 text-base font-semibold rounded-full cursor-pointer shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 whitespace-nowrap" style={{ color: '#004AAD' }}>
+                                WEB DE HAPPY
+                            </button>
+                        </a>
+                        <a href={`${import.meta.env.BASE_URL}brochure presentaciónHappifyc2.pdf`} target="_blank" rel="noopener noreferrer">
+                            <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-4 text-base font-semibold rounded-full cursor-pointer shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 whitespace-nowrap" style={{ color: '#004AAD' }}>
+                                PORTAFOLIO
+                            </button>
+                        </a>
+                    </div>
 
                     <div className="md:hidden relative py-8 flex items-center justify-center gap-4 z-20">
                         <button onClick={handlePrev} className="text-5xl text-black cursor-pointer transition-all duration-300 flex-shrink-0 hover:scale-125 active:scale-95 bg-transparent border-none z-30 relative">‹</button>

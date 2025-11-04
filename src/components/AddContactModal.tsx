@@ -68,7 +68,7 @@ END:VCARD`;
                     <button
                         onClick={handleAddContact}
                         className="bg-gradient-to-br from-cyan-500 to-cyan-400 text-white px-8 py-3 rounded-full font-semibold w-full mb-3 hover:shadow-lg transition-all duration-300"
-                        style={{ color: '#004AAD' }}
+                        style={{ color: '#9D6FEB' }}
                     >
                         Añadir Contacto
                     </button>
