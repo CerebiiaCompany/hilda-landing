@@ -18,7 +18,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="text-white flex-1 order-2 md:order-1 text-center md:text-left mt-4 md:mt-0">
-                    <p className="text-sm mb-4 text-white opacity-90"><span style={{ color: '#004AAD' }}>Presidenta & CEO en BPO Happify </span> | Optimizar operaciones desde la productividad con bienestar.
+                    <p className="text-sm mb-4 text-white opacity-90"><span style={{ color: '#004AAD' }}>Gerente General en BPO Happify </span> | Optimizar operaciones desde la productividad con bienestar.
                     </p>
                     <h1 className="text-5xl md:text-6xl font-Codec mb-4 leading-tight">Santiago Castañeda Lopera</h1>
 
