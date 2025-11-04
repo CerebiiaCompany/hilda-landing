@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 interface ContactInfo {
     name: string;
-    phone: string; // idealmente en formato internacional, ej: 573001234567
+    phone: string;
 }
 
 interface AddContactModalProps {
@@ -14,59 +14,70 @@ export default function AddContactModal({ contact, storageKey }: AddContactModal
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
+        // Si hay storageKey, solo mostramos el modal si no se ha visto antes.
         if (storageKey) {
             const hasSeenModal = localStorage.getItem(storageKey);
             if (!hasSeenModal) {
                 setIsOpen(true);
             }
         } else {
+            // Si no hay storageKey, siempre mostramos el modal.
             setIsOpen(true);
         }
     }, [storageKey]);
 
     const handleClose = () => {
         if (storageKey) {
-            localStorage.setItem(storageKey, "true");
+            localStorage.setItem(storageKey, 'true');
         }
         setIsOpen(false);
     };
 
-    const getNormalizedPhoneForWhatsapp = (phone: string) => {
-        // Quita todo lo que no sea número
-        const digits = phone.replace(/\D/g, "");
-        // Aquí podrías forzar prefijo de país si quieres, p. ej. Colombia: 57
-        // if (digits.length === 10) return "57" + digits;
-        return digits;
-    };
-
-    const handleAddContact = () => {
-        const isAndroid = /Android/i.test(navigator.userAgent);
-        const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-        // Si es ANDROID → abrir WhatsApp con ese número
-        if (isAndroid) {
-            const normalized = getNormalizedPhoneForWhatsapp(contact.phone);
-            if (normalized) {
-                const waUrl = `https://wa.me/${normalized}`;
-                window.location.href = waUrl;
-            }
-            handleClose();
-            return;
-        }
-
-        // Si es iOS (o cualquier otro donde el vCard te funcionaba) → usar vCard
+    const handleAddContact = async () => {
+        // vCard con formato estándar
         const vCard = [
-            "BEGIN:VCARD",
-            "VERSION:3.0",
+            'BEGIN:VCARD',
+            'VERSION:3.0',
             `FN:${contact.name}`,
             `TEL;TYPE=CELL:${contact.phone}`,
-            "END:VCARD",
-        ].join("\n");
+            'END:VCARD',
+        ].join('\n');
 
-        const encoded = encodeURIComponent(vCard);
-        const url = `data:text/vcard;charset=utf-8,${encoded}`;
-        window.location.href = url;
+        try {
+            // 1) Intentar usar Web Share API con archivo (lo más "nativo" posible)
+            const blob = new Blob([vCard], { type: 'text/vcard' });
+            const file = new File([blob], `${contact.name || 'contacto'}.vcf`, {
+                type: 'text/vcard',
+            });
 
+            const navAny = navigator as any;
+
+            if (navAny.share && navAny.canShare && navAny.canShare({ files: [file] })) {
+                await navAny.share({
+                    files: [file],
+                    title: contact.name,
+                    text: 'Añadir contacto',
+                });
+            } else {
+                // 2) Fallback: navegar a un blob URL (muchos móviles lo abren como contacto)
+                const url = URL.createObjectURL(blob);
+                window.location.href = url;
+
+                // Liberar URL después de un rato
+                setTimeout(() => {
+                    URL.revokeObjectURL(url);
+                }, 5000);
+            }
+        } catch (error) {
+            console.error('Error al compartir/abrir el contacto:', error);
+
+            // 3) Último fallback: data URL (tu implementación actual)
+            const encoded = encodeURIComponent(vCard);
+            const url = `data:text/vcard;charset=utf-8,${encoded}`;
+            window.location.href = url;
+        }
+
+        // Cerramos el modal y marcamos como visto
         handleClose();
     };
 
@@ -75,11 +86,11 @@ export default function AddContactModal({ contact, storageKey }: AddContactModal
     return (
         <div
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
-            onClick={handleClose}
+            onClick={handleClose} // click en el fondo cierra
         >
             <div
                 className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl relative"
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => e.stopPropagation()} // evita que el click dentro cierre el modal
             >
                 <button
                     onClick={handleClose}
@@ -121,7 +132,7 @@ export default function AddContactModal({ contact, storageKey }: AddContactModal
                     <button
                         onClick={handleAddContact}
                         className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 py-3 text-xl font-semibold rounded-full cursor-pointer shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full mb-3"
-                        style={{ color: "#004AAD" }}
+                        style={{ color: '#004AAD' }}
                     >
                         Añadir Contacto
                     </button>
