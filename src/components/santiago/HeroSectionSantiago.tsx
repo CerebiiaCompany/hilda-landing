@@ -22,11 +22,13 @@ export default function HeroSection() {
             <div className="text-center text-white text-lg z-10 opacity-90 flex flex-col items-center w-full md:w-2/5 mx-auto">
                 <p className="pt-8 md:pt-12">Santiago ha representado a Happify en espacios sectoriales y comparte con claridad casos de éxito sobre cómo integrar RPA, chatbots y analítica para liberar a los agentes de lo repetitivo y potenciar lo humano.
                 </p>
-                <a href="https://www.linkedin.com/in/santiago-casta%C3%B1eda-894118267/" target="_blank" rel="noopener noreferrer">
-                    <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-3 text-xl font-semibold rounded-full cursor-pointer mt-6 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full md:w-auto whitespace-nowrap" style={{ color: '#004AAD' }}>
-                        LinkedIn
-                    </button>
-                </a>
+                <button
+                    onClick={() => window.open('https://www.linkedin.com/in/santiago-casta%C3%B1eda-894118267/', '_blank')}
+                    className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-3 text-xl font-semibold rounded-full cursor-pointer mt-6 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-full md:w-auto whitespace-nowrap"
+                    style={{ color: '#004AAD' }}
+                >
+                    LinkedIn
+                </button>
             </div>
 
             <img src={`${import.meta.env.BASE_URL}cuadro1.png`} alt="" className="absolute w-24 md:w-32 h-24 md:h-32 top-[5%] md:top-[8%] left-[5%] md:left-[54%] z-0 animate-float opacity-80" />

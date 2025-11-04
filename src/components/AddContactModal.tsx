@@ -28,19 +28,12 @@ FN:${contact.name}
 TEL:${contact.phone}
 END:VCARD`;
 
-        const blob = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
-        const url = window.URL.createObjectURL(blob);
+        // Creamos un data URL para intentar abrir directamente el contacto
+        const encoded = encodeURIComponent(vCard);
+        const url = `data:text/vcard;charset=utf-8,${encoded}`;
 
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = contact.fileName;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-
-        setTimeout(() => {
-            window.URL.revokeObjectURL(url);
-        }, 100);
+        // Navegamos a la URL. En muchos móviles esto abre el diálogo de contacto.
+        window.location.href = url;
 
         localStorage.setItem(storageKey, 'true');
         setIsOpen(false);
