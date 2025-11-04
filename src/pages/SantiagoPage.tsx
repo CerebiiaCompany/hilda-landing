@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Navbar from '../components/santiago/NavbarSantiago'
 import BpoHappifySection from '../components/santiago/BpoHappifySectionSantiago'
 import ServicesSection from '../components/ServicesSection'
@@ -5,6 +6,10 @@ import HeroSectionSantiago from '../components/santiago/HeroSectionSantiago'
 import AddContactModal from '../components/AddContactModal'
 
 export default function SantiagoPage() {
+    useEffect(() => {
+        document.title = 'Santiago Castañeda'
+    }, [])
+
     return (
         <div className="overflow-x-hidden">
             <AddContactModal

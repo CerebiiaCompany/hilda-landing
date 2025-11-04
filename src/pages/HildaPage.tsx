@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Navbar from '../components/hilda/Navbar'
 import BpoHappifySection from '../components/hilda/BpoHappifySection'
 import ServicesSection from '../components/ServicesSection'
@@ -5,6 +6,10 @@ import HeroSection from '../components/hilda/HeroSection'
 import AddContactModal from '../components/AddContactModal'
 
 export default function HildaPage() {
+    useEffect(() => {
+        document.title = 'Hilda Palacios'
+    }, [])
+
     return (
         <div className="overflow-x-hidden">
             <AddContactModal
