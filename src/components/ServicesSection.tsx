@@ -7,9 +7,21 @@ export default function ServicesSection() {
 
 
     const services = [
-        { image: `${import.meta.env.BASE_URL}izquierda.png`, alt: 'Servicio 1' },
-        { image: `${import.meta.env.BASE_URL}medio.png`, alt: 'Servicio 2' },
-        { image: `${import.meta.env.BASE_URL}derecha.png`, alt: 'Servicio 3' }
+        {
+            image: `${import.meta.env.BASE_URL}izquierda.png`,
+            alt: 'Servicio 1',
+            text: 'Agentes felices; menor rotación y mejor CSAT.'
+        },
+        {
+            image: `${import.meta.env.BASE_URL}medio.png`,
+            alt: 'Servicio 2',
+            text: 'Automatización con sentido; +65% de agendamientos automáticos.'
+        },
+        {
+            image: `${import.meta.env.BASE_URL}derecha.png`,
+            alt: 'Servicio 3',
+            text: 'Implementación sin fricción; piloto en semanas.'
+        }
     ];
 
     const handlePrev = () => {
@@ -46,13 +58,12 @@ export default function ServicesSection() {
 
                 <div className="max-w-6xl mx-auto text-center relative z-20">
                     <h2 className="text-4xl md:text-5xl font-bold text-indigo-500 mb-4 leading-tight relative z-20">
-                        Lorem ipsum dolor sit amet, consectetur<br />
-                        adipiscing <span className="text-cyan-400">elit</span>
+                        CONTACT CENTER <span className="text-cyan-400">elit</span>
                     </h2>
                     <p className="text-lg text-gray-800 mb-4 relative z-20">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
 
                     <button className="bg-gradient-to-br from-cyan-500 to-cyan-400 border-none px-8 md:px-16 py-4 text-base font-semibold rounded-full cursor-pointer mb-16 shadow-lg shadow-cyan-500/30 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 w-auto max-w-sm md:max-w-lg mx-auto whitespace-nowrap relative z-20" style={{ color: '#004AAD' }}>
-                        CONOCE NUESTROS SERVICIOS
+                        WEB DE HAPPY
                     </button>
 
                     <div className="md:hidden relative py-8 flex items-center justify-center gap-4 z-20">
@@ -61,7 +72,7 @@ export default function ServicesSection() {
                         <div className="rounded-2xl p-10 w-full max-w-sm min-h-[280px] flex flex-col items-center gap-6 border-2 border-purple-300 shadow-xl transition-all duration-600 ease-out relative z-20" style={{ backgroundColor: 'rgba(230, 220, 250, 0.5)' }}>
                             <img src={services[currentIndex].image} alt={services[currentIndex].alt} className="w-20 h-20 object-contain" />
                             <p className="text-sm leading-relaxed text-gray-700 text-center m-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                {services[currentIndex].text}
                             </p>
                         </div>
 
@@ -74,21 +85,21 @@ export default function ServicesSection() {
                         <div className="rounded-2xl p-10 w-72 min-h-[280px] flex flex-col items-center gap-6 border-2 border-purple-300 opacity-70 scale-90 hover:scale-95 transition-all duration-600 ease-out" style={{ backgroundColor: 'rgba(230, 220, 250, 0.5)' }}>
                             <img src={services[getCardIndex(-1)].image} alt={services[getCardIndex(-1)].alt} className="w-20 h-20 object-contain" />
                             <p className="text-sm leading-relaxed text-gray-700 text-center m-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                {services[getCardIndex(-1)].text}
                             </p>
                         </div>
 
                         <div className="rounded-2xl p-10 w-72 min-h-[280px] flex flex-col items-center gap-6 border-2 border-purple-300 shadow-xl transition-all duration-600 ease-out hover:scale-105" style={{ backgroundColor: 'rgba(230, 220, 250, 0.5)' }}>
                             <img src={services[currentIndex].image} alt={services[currentIndex].alt} className="w-20 h-20 object-contain" />
                             <p className="text-sm leading-relaxed text-gray-700 text-center m-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                {services[currentIndex].text}
                             </p>
                         </div>
 
                         <div className="rounded-2xl p-10 w-72 min-h-[280px] flex flex-col items-center gap-6 border-2 border-purple-300 opacity-70 scale-90 hover:scale-95 transition-all duration-600 ease-out" style={{ backgroundColor: 'rgba(230, 220, 250, 0.5)' }}>
                             <img src={services[getCardIndex(1)].image} alt={services[getCardIndex(1)].alt} className="w-20 h-20 object-contain" />
                             <p className="text-sm leading-relaxed text-gray-700 text-center m-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                {services[getCardIndex(1)].text}
                             </p>
                         </div>
 
