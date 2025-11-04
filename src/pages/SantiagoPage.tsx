@@ -1,7 +1,7 @@
-import Navbar from '../components/Navbar'
-import BpoHappifySection from '../components/BpoHappifySection'
+import Navbar from '../components/santiago/NavbarSantiago'
+import BpoHappifySection from '../components/santiago/BpoHappifySectionSantiago'
 import ServicesSection from '../components/ServicesSection'
-import HeroSectionSantiago from '../components/HeroSectionSantiago'
+import HeroSectionSantiago from '../components/santiago/HeroSectionSantiago'
 import AddContactModal from '../components/AddContactModal'
 
 export default function SantiagoPage() {

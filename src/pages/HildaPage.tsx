@@ -1,7 +1,7 @@
-import Navbar from '../components/Navbar'
-import BpoHappifySection from '../components/BpoHappifySection'
+import Navbar from '../components/hilda/Navbar'
+import BpoHappifySection from '../components/hilda/BpoHappifySection'
 import ServicesSection from '../components/ServicesSection'
-import HeroSection from '../components/HeroSection'
+import HeroSection from '../components/hilda/HeroSection'
 import AddContactModal from '../components/AddContactModal'
 
 export default function HildaPage() {
