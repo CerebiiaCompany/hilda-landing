@@ -6,11 +6,36 @@
     {
       "src": "^/$",
       "status": 308,
-      "headers": { "Location": "/hilda-palacios/" }
+      "headers": {
+        "Location": "/hilda-palacios/"
+      }
     },
-    { "handle": "filesystem" },
-    { "src": "^/hilda-palacios$", "dest": "/index.html" },
-    { "src": "^/hilda-palacios/(.*)$", "dest": "/$1" },
-    { "src": "^/hilda-palacios/.*", "dest": "/index.html" }
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/hilda-palacios$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/hilda-palacios/(.*)$",
+      "dest": "/$1"
+    },
+    {
+      "src": "^/hilda-palacios/.*",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/santiago-castaneda$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/santiago-castaneda/(.*)$",
+      "dest": "/$1"
+    },
+    {
+      "src": "^/santiago-castaneda/.*",
+      "dest": "/index.html"
+    }
   ]
 }
