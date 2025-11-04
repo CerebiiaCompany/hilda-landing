@@ -33,8 +33,8 @@ export default function AddContactModal({ contact, storageKey }: AddContactModal
         setIsOpen(false);
     };
 
-    const handleAddContact = () => {
-        // vCard con formato más estándar
+    const handleAddContact = async () => {
+        // vCard con formato estándar
         const vCard = [
             'BEGIN:VCARD',
             'VERSION:3.0',
@@ -43,12 +43,39 @@ export default function AddContactModal({ contact, storageKey }: AddContactModal
             'END:VCARD',
         ].join('\n');
 
-        // Creamos un data URL para intentar abrir directamente el contacto
-        const encoded = encodeURIComponent(vCard);
-        const url = `data:text/vcard;charset=utf-8,${encoded}`;
+        try {
+            // 1) Intentar usar Web Share API con archivo (lo más "nativo" posible)
+            const blob = new Blob([vCard], { type: 'text/vcard' });
+            const file = new File([blob], `${contact.name || 'contacto'}.vcf`, {
+                type: 'text/vcard',
+            });
 
-        // En muchos móviles esto abre el diálogo nativo para añadir el contacto
-        window.location.href = url;
+            const navAny = navigator as any;
+
+            if (navAny.share && navAny.canShare && navAny.canShare({ files: [file] })) {
+                await navAny.share({
+                    files: [file],
+                    title: contact.name,
+                    text: 'Añadir contacto',
+                });
+            } else {
+                // 2) Fallback: navegar a un blob URL (muchos móviles lo abren como contacto)
+                const url = URL.createObjectURL(blob);
+                window.location.href = url;
+
+                // Liberar URL después de un rato
+                setTimeout(() => {
+                    URL.revokeObjectURL(url);
+                }, 5000);
+            }
+        } catch (error) {
+            console.error('Error al compartir/abrir el contacto:', error);
+
+            // 3) Último fallback: data URL (tu implementación actual)
+            const encoded = encodeURIComponent(vCard);
+            const url = `data:text/vcard;charset=utf-8,${encoded}`;
+            window.location.href = url;
+        }
 
         // Cerramos el modal y marcamos como visto
         handleClose();
