@@ -17,13 +17,19 @@ FN:Hilda Palacios
 TEL:+57 315 8346517
 END:VCARD`;
 
-        const blob = new Blob([vCard], { type: 'text/vcard' });
+        const blob = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
         const url = window.URL.createObjectURL(blob);
+
         const link = document.createElement('a');
         link.href = url;
         link.download = 'Hilda_Palacios.vcf';
+        document.body.appendChild(link);
         link.click();
-        window.URL.revokeObjectURL(url);
+        document.body.removeChild(link);
+
+        setTimeout(() => {
+            window.URL.revokeObjectURL(url);
+        }, 100);
 
         localStorage.setItem('hasSeenContactModal', 'true');
         setIsOpen(false);

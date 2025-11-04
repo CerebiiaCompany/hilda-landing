@@ -1,23 +1,16 @@
-import Navbar from './components/Navbar'
-import BpoHappifySection from './components/BpoHappifySection'
-import ServicesSection from './components/ServicesSection'
-import HeroSection from './components/HeroSection'
-import AddContactModal from './components/AddContactModal'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import HildaPage from './pages/HildaPage'
+import SantiagoPage from './pages/SantiagoPage'
 
 function App() {
   return (
-    <div className="overflow-x-hidden">
-      <AddContactModal />
-      <Navbar />
-      <div className="bg-white">
-        <div className="bg-gradient-to-br from-[#9b6cf8] to-[#b89dfa] rounded-b-[80px] md:rounded-b-[6%]">
-          <HeroSection />
-          <BpoHappifySection />
-        </div>
-      </div>
-
-      <ServicesSection />
-    </div>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <Routes>
+        <Route path="/" element={<Navigate to="/hilda-palacios" replace />} />
+        <Route path="/hilda-palacios" element={<HildaPage />} />
+        <Route path="/santiago-castaneda" element={<SantiagoPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
