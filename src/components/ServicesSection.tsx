@@ -58,7 +58,7 @@ export default function ServicesSection() {
 
                 <div className="max-w-6xl mx-auto text-center relative z-20">
                     <h2 className="text-4xl md:text-5xl font-bold text-indigo-500 mb-4 leading-tight relative z-20">
-                        Contact center feliz en <span className="text-cyan-400">Colombia</span>
+                        Contact center feliz en <span className="text-cyan-400">COLOMBIA</span>
                     </h2>
                     <p className="text-lg text-gray-800 mb-4 relative z-20 max-w-4xl mx-auto px-4">En Happify fusionamos automatización inteligente con agentes motivados para entregar una atención al cliente humana, rápida y medible.</p>
 
