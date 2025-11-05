@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import HildaPage from './pages/HildaPage'
 import SantiagoPage from './pages/SantiagoPage'
+import AddToHomeScreenModal from './components/AddToHomeScreenModal'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/hilda-palacios" element={<HildaPage />} />
         <Route path="/santiago-castaneda" element={<SantiagoPage />} />
       </Routes>
+      <AddToHomeScreenModal />
     </BrowserRouter>
   )
 }
