@@ -1,12 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import AddContactModal from '../AddContactModalButton';
 
 export default function HeroSection() {
     const [showModal, setShowModal] = useState(false);
-
-    useEffect(() => {
-        setShowModal(true);
-    }, []);
 
     const handleAddContact = () => {
         setShowModal(true);
