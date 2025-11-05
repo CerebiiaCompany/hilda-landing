@@ -1,0 +1,22 @@
+{
+    "name": "Santiago Castañeda - BPO Happify",
+    "short_name": "Santiago Castañeda",
+    "description": "Servicios de BPO y Contact Center - Santiago Castañeda",
+    "theme_color": "#004AAD",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/santiago-castaneda",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/Frame 38.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/Frame 38.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
