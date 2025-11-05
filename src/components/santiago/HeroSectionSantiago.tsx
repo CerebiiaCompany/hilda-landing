@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import AddContactModal from '../AddContactModalButton';
+import AddToHomeScreenModal from '../AddToHomeScreenModal';
 
 export default function HeroSection() {
     const [showModal, setShowModal] = useState(false);
+    const [showHomeScreenModal, setShowHomeScreenModal] = useState(false);
 
     useEffect(() => {
-        setShowModal(true);
+        setShowHomeScreenModal(true);
     }, []);
 
     const handleAddContact = () => {
@@ -58,6 +60,12 @@ export default function HeroSection() {
                         phone: '+57 318 2574616',
                     }}
                     onClose={() => setShowModal(false)}
+                />
+            )}
+
+            {showHomeScreenModal && (
+                <AddToHomeScreenModal
+                    onClose={() => setShowHomeScreenModal(false)}
                 />
             )}
 
